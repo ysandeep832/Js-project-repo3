@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bgimage{
+         background-image: url('https://www.enterprise.com/en/home/_jcr_content/root/container/container/container_933387721/image.coreimg.82.1920.png/1712084651986/img-2-3x-img-2-3x.png');
+         display: flex;
+            justify-content: center;
+            align-content: center;
+            padding: 30px;
+        }
+      .hhh2{
+        color: yellow;
+        position: relative;
+        top: -40px; 
+        left: 70px;
+      }
+        .formm{
+            border: 1px solid white;
+            border-radius: 50px;
+            width: 500px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .formm:hover{
+            transform: scale(1.0);
+        }
+        label{
+            color: white;
+        }
+        input{
+            border-radius: 7px;
+        }
+        .sub_mit:hover{
+            background-color: blue;
+            color: white;
+        }
+        footer{
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+
+     }
+    </style>
+</head>
+<body>
+    <div class="bgimage">
+        <h2 class="hhh2">Signin</h2>
+    <div class="formm">
+    <form action="./avail_cars.html" method="post" ><br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="usrename or email" required><br><br>
+        <label for="psrwd">password</label>
+        <input type="password" name="psrwd" id="psrwd" placeholder="  password" required><br><br>
+        <input class="sub_mit" type="submit" value="login">
+        </form>
+        </div>
+  </div>
+
+<footer>
+    <div class="f1">
+        <h2>Information </h2>
+        <div>About</div>
+        <div>Services</div>
+        <div>Terms and conditions</div>
+        <div>Best price policies</div>
+        <div>Privacy & cookie policy</div>
+    </div>
+    <div class="f2">
+      <h2>Customer Support</h2>
+      <div>FAQ</div>
+      <div>Payment option </div>
+      <div>Booking Tips</div>
+      <div>How it works </div>
+      <div>Contact us</div>
+    </div>
+    <div class="f3">
+   <h2>Have a Questions</h2>
+        <div>Cell:6000-223-010</div>
+        <div>carrent@booking.com</div>
+    </div>
+
+</footer>
+
+   <script>
+    //  console.log(document.form);
+
+     var formm=document.getElementsByTagName("form")
+  var pushh=[];
+//   console.log(formm[0])
+
+  document.forms[0].addEventListener("submit",(e)=>{
+        e.preventDefault()
+        var login_details={
+                email:e.target[0].value,
+                password:e.target[1].value
+
+        }
+        pushh.push(login_details);
+        console.log(pushh)
+    
+        
+        e.target[0].value="";
+        e.target[1].value="";
+
+        window.location.assign("./avail_cars.html")
+
+    })
+
+   </script>
+
+    
+</body>
+</html>

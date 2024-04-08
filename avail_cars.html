@@ -1,0 +1,214 @@
+
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+        #pd_main { 
+
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card1{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            width: 55vh;
+            border-radius: 7px;
+            box-shadow: 10px 10px 15px rgb(110, 107, 107);
+            background-color: white;
+          
+        }
+
+        .middle {
+            margin-bottom: 20px;
+
+        }
+        button:hover{
+            color: white ;
+            background-color: blue;
+        }
+     footer{
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+
+     }
+        .card1:hover{
+             transform:scale(1.05);
+        }
+        
+    </style>
+</head>
+
+<body>
+
+
+    <div>
+        <marquee direction="right" style="font-size: larger;">Book Your Dreem Car</marquee>
+    </div>
+
+    <div id="pd_main">
+
+   </div>
+
+    <!-- <div><a href="./rent-regs_form.html">
+            <h3 style="color: green;">click here for register</h3>
+        </a></div> -->
+
+        <footer>
+
+
+            <div class="f1">
+                <h2>Information </h2>
+                <div>About</div>
+                <div>Services</div>
+                <div>Terms and conditions</div>
+                <div>Best price policies</div>
+                <div>Privacy & cookie policy</div>
+            </div>
+            <div class="f2">
+              <h2>Customer Support</h2>
+              <div>FAQ</div>
+              <div>Payment option </div>
+              <div>Booking Tips</div>
+              <div>How it works </div>
+              <div>Contact us</div>
+                
+            </div>
+        
+            <div class="f3">
+           <h2>Have a Questions</h2>
+        
+                <div>Cell:6000-223-010</div>
+                <div>carrent@booking.com</div>
+                 
+            </div>
+        
+        
+        
+        
+        </footer>
+
+
+    <script>
+        var data = [{
+            image: "https://stimg.cardekho.com/images/carexteriorimages/930x620/Toyota/Toyota-Innova/1174/1544523709266/front-left-side-47.jpg",
+            name: "Toyota-Innova",
+            id: 101,
+            model: 2024,
+            mileage: "15 kmpl"
+        }, {
+            image: "https://imgd.aeplcdn.com/664x374/n/cw/ec/107543/brezza-exterior-right-front-three-quarter-7.jpeg?isig=0&q=80",
+            name: "BREEZA",
+            id: 102,
+            model: 2021,
+            mileage: "10 kmpl"
+        },
+        {
+            // image: "./maruthi_car-js.jpeg",
+            image: "https://imgd.aeplcdn.com/370x208/n/cw/ec/130591/fronx-exterior-right-front-three-quarter-109.jpeg?isig=0&q=80E",
+            name: "Maruthi Suzuki",
+            id: 103,
+            model: 2019,
+            mileage: "18 kmpl"
+        }, {
+            image: "https://imgd.aeplcdn.com/664x374/n/w4p5ora_1420910.jpg?q=80",
+            name: "Indica",
+            id: 104,
+            model: 2018,
+            mileage: "19 kmpl"
+        }, {
+            image: "https://t3.ftcdn.net/jpg/05/40/34/28/360_F_540342803_QwNUPFqwpa2eL27iW5E6WSuBf2OWAIeJ.jpg",
+            name: "RangeRover",
+            id: 105,
+            model: 2020,
+            mileage: "15 kmpl"
+        }, {
+            image: "https://stimg.cardekho.com/images/carexteriorimages/930x620/Toyota/Toyota-Innova/1174/1544523709266/front-left-side-47.jpg",
+            name: "Toyota-Innova",
+            id: 106,
+            model: 2022,
+            mileage: "25 kmpl"
+        }]
+
+        
+        // window.localStorage.setItem("carData",JSON.stringify(data))
+        var pd=document.getElementById("pd_main")
+
+
+        for(let i=0; i<data.length; i++){
+            var divcard=document.createElement("div")
+            pd.appendChild(divcard)
+            divcard.setAttribute("class","card1")
+
+            var divimag=document.createElement("div")
+            divcard.appendChild(divimag)
+
+            var imgg=document.createElement("img")
+            divcard.appendChild(imgg)
+            imgg.setAttribute("src",data[i]["image"])
+            imgg.setAttribute("height","250px")
+            imgg.setAttribute("width","300px")
+            
+            // imgg.addEventListener("click",()=>{
+            //     window.localStorage.setItem("carInfo",JSON.stringify(data[i]))
+            //     window.location.assign("./booking-form.html")
+            // })
+
+
+            var h3tag=document.createElement("h3")
+            divcard.appendChild(h3tag)
+            h3tag.innerText=data[i]["name"]
+            h3tag.setAttribute("class","middle")
+
+            var h3tag=document.createElement("h3")
+            divcard.appendChild(h3tag)
+            h3tag.innerText= "car id: "+" "+data[i]["id"]
+            h3tag.setAttribute("class","middle")
+
+            var div1=document.createElement("div")
+            divcard.appendChild(div1)
+            div1.innerText="Model: "+" "+data[i]["model"]
+            div1.setAttribute("class","middle")
+
+            var div1=document.createElement("div")
+            divcard.appendChild(div1)
+            div1.innerText="Mileage: "+" "+data[i]["mileage"]
+            div1.setAttribute("class","middle")
+
+            var btn=document.createElement("button")
+            btn.innerText="Book"
+          
+             divcard.appendChild(btn);
+    
+            btn.setAttribute("class","middle")
+                                                
+            btn.addEventListener("click",()=>{
+               
+                window.localStorage.setItem("carInfo",JSON.stringify(data[i]))
+             window.location.assign("./booking-form.html")
+            })
+                                 
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

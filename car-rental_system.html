@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{    
+        background-color:gainsboro ;
+    }
+  .first_div  {
+        background-image: url(' https://www.longdrivecars.com/ldcars_assets/img/slider-bg.webp'); 
+        height: 100vh;
+       
+    }
+ ul,li{
+        border: 1px solid green;
+        border-radius: 20px;
+        height: 70px;
+        background-color: green;
+        display: flex;
+        justify-content:space-evenly;
+        align-items:center;
+        color: white;
+       
+   
+    }
+    .pd{
+        /* background-image: url(' https://www.longdrivecars.com/ldcars_assets/img/slider-bg.webp'); 
+       
+        background-image: url("./car-imggg.jpg"); */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+    .h44{
+        border: 1px solid red;
+        border-radius: 4px;
+        color: white;
+        background-color: red;
+        padding-left: 110px;
+        padding-right: 80px;
+        height: 40px;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+                                     
+    }
+    .imgg{
+        mix-blend-mode: color-burn;
+    }
+
+
+    
+footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.reg-form{
+    border: 2px solid black;
+    width: 350px;
+    float: right;
+   
+}
+
+.loggin{
+    background-color:red;
+color:white;
+}
+label{
+    color: white;
+    background-color: red;
+}
+.nav_bar{
+    position: sticky;
+    top: 3px;
+    padding-top: -40px;
+}
+input{
+    border: 1px solid black;
+    border-radius: 7px;
+}
+.a1{
+    border: 1px solid aquamarine;
+    background-color:aquamarine;
+    
+}
+.service_main{
+    display: flex;
+}
+.service1,.service2,.service3{
+    border: 1px solid white;
+    flex-wrap: wrap;
+    /* background-color: blue; */
+    color: white;
+
+}
+.total_service{
+    background-color: blue;
+}
+
+
+</style>
+
+</head>
+<body>
+
+    <div class="nav_bar">
+        <nav class="nav_bar">
+            <ul>
+                <li><a href="./car-rental_system.html">Home</a></li>
+                <li>
+              <a href="#link1">About</a>
+            </li>
+                <li><a href="#servess">Services</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </nav>
+        </div>
+  
+    <div class="first_div">
+    <div class="pd">
+   <div class="divv">
+    <h2 style="color: white;">ALL CARS PROFESSIONAL SERVICES</h2>
+    <h1 style="color: white;font-family: 'Courier New', Courier, monospace;">NOW AVAILABLE</h1>
+    <p class="h44">SELECT A CAR SERVICE</p>
+</div>
+<div>
+    <img src="./Indica_car-js.webp" alt="imgg" height="100px" class="imgg">
+</div>
+</div>
+<div class="reg-form">
+    <h2>Enter your datails for create account </h2>
+    <form action="./avail_cars.html">
+        <label for="fname">First Name</label>
+        <input type="text" name="fname" id="fname" placeholder="Firstname" required><br><br>
+        <label for="lname">Last Name</label>
+        <input type="text" name="lname" id="lname" placeholder="lastname"><br><br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="enter mail" required><br><br>
+        <label for="psrwd">password</label>
+        <input type="password" name="psrwd" id="psrwd" placeholder=" create password" required><br><br>
+        <input type="submit" value="submit" style="margin-left: 70px;"><br>
+         <p><a href="./rent-login.html" class="loggin">Already have an account login here</a></p>
+        
+    </form>
+    <form>
+    <button formaction="./avail_cars.html">Skip</button>
+    </form>
+    </div>
+<div>
+    <p style="color: white;">TAKING CARE OF YOUR CARS</p>
+</div>
+</div>
+     
+ </div>
+ <!-- about us start -->
+ <div class="a1" id="link1">
+    <h4 class="abt_us" style="color: red;">About us</h4>
+    <h2>Welcome to car book</h2>
+    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+    <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+ </div>
+   <!-- about us end -->
+
+   <!-- image start -->
+    <div class="ab_afterImg" style="text-align: center;">
+    <img src="https://media.istockphoto.com/id/1341156511/vector/car.jpg?s=612x612&w=0&k=20&c=Q3seVoMkwb2AT62z0Va1J4YdqeY3VFzzjXT6pnH6VSU=" alt="not okay" width="250px" height="100px">
+    </div>
+    <!-- image end -->
+                
+    <!-- services start -->
+    <div class="total_service" id="servess">
+    <h3 style="color: red; text-align: center; background-color:yellow;width: 200px;">Services</h3>
+    <div class="service_main">
+    <div class="service1">
+     <div><h2>City Transfer</h2></div>
+     <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+    </div>
+    <div class="service2">
+        <div><h2>Airport Transfer</h2></div>
+        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+       </div>
+       <div class="service3">
+        <div><h2>Whole City Tour</h2></div>
+        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+       </div>
+     
+    </div>
+</div>
+
+<footer>
+    <div class="f1">
+        <h2>Information </h2>
+        <div>About</div>
+        <div>Services</div>
+        <div>Terms and conditions</div>
+        <div>Best price policies</div>
+        <div>Privacy & cookie policy</div>
+    </div>
+    <div class="f2">
+      <h2>Customer Support</h2>
+      <div>FAQ</div>
+      <div>Payment option </div>
+      <div>Booking Tips</div>
+      <div>How it works </div>
+      <div>Contact us</div>
+        
+    </div>
+
+    <div class="f3">
+   <h2>Have a Questions</h2>
+
+        <div>Cell:6000-223-010</div>
+        <div>carrent@booking.com</div>
+         
+    </div>
+</footer>
+
+<script>
+    console.log(document.forms);
+    
+    var a=[]
+    
+    document.forms[0].addEventListener("submit",function (e){
+       e.preventDefault()
+            var reg={
+           " First Name":e.target[0].value,
+            "Last Name":e.target[1].value, 
+            Email:e.target[2].value,
+          password:e.target[3].value
+             
+        } 
+        a.push(reg);
+        console.log(a)
+    
+        // window.localStorage.setItem("reg",JSON.stringify(a));
+        e.target[0].value="";
+        e.target[1].value="";
+        e.target[2].value="";
+        e.target[3].value="";
+        window.location.assign("./avail_cars.html")
+
+    })
+    
+    </script>
+
+    
+</body>
+</html>
+
